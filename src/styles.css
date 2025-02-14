@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'MyFontRubik';
+    src: url('./Rubik-VariableFont_wght.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyFontRubikItalic';
+    src: url('./Rubik-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.wrapper {
+    justify-content: space-around;
+    flex-direction: 'column';
+    background-image: url('./bg.jpg');
+}
+
+.text-element {
+    color: blue;
+    font-family: 'MyFontRubikItalic';
+    margin: 5px 0px 20px 0px;
+}
