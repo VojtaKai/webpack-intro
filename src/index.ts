@@ -4,6 +4,10 @@ import Icon from './icon.png'
 import Data from './data.xml'
 import Notes from './data.csv'
 
+function calculateSum(num1: number, num2: number) {
+    return num1 + num2
+}
+
 async function getDynamicElement() {
     try {
         const lodash = await import('lodash')
@@ -17,8 +21,8 @@ async function getDynamicElement() {
 
         return element
 
-    } catch (e) {
-        throw new Error('Failed')
+    } catch (e: any) {
+        throw new Error(e.message)
     }
 }
 
