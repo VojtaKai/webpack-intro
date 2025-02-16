@@ -19,11 +19,19 @@ module.exports = {
         rules: [
             {
                 test: /\.([cm]?ts|tsx)$/,
-                loader: 'ts-loader',
-                options: {
-                    // disable type checker - we will use it in fork plugin
-                    transpileOnly: true
-                },
+                loader: "babel-loader",
+                // It is adviced to have the preset settings set up here as well.
+                // Webpack does not always take the babel.config.json into account
+                // options: {
+                //     presets: [
+                //         [
+                //             "@babel/preset-env", {
+                //                 "targets": "> 0.25%, not dead"
+                //             }
+                //         ],
+                //         "@babel/preset-typescript"
+                //     ]
+                // },
                 exclude: /node_modules/
             },
             {
